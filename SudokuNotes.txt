@@ -1,0 +1,22 @@
+Notes on the testing.py bugs/features
+
+What do I need to do?
+
+I also need to handle entering numbers for a solve, not just loading them. To do this, I would need to handle the state of the puzzle when solve is hit. If the puzzle is not solvable given the input, I need to handle this.
+
+Default: Writeable blank cells to input custom puzzle state.
+Solve this using solve button. Grid filled to solve state. If unsolvable, don't do anything with the grid, just create an error message/window.
+
+Load:
+When load is hit, clear the grid and load in a puzzle state. The cells with pre-filled values should become read-only. Empty cells should still be writeable.
+When hitting solve then we need to solve from the original puzzle, as solving from the grid may make it unsolvable if a users input is incorrect.
+I could also incorporate a check button for a loaded state. Comparing the current state to the solved state and highlighting any user-filled squares that do not match.
+
+For saving games:
+For now, save will be null.
+
+
+
+Build a new class for the entry cell. It can hold a default value for certain things such as colour etc.
+
+Class could have 'state' passed to it that sets the features.
